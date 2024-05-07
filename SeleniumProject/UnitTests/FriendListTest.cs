@@ -10,22 +10,11 @@ namespace SeleniumProject.UnitTests
         {
             Screenshot screenshot = ((ITakesScreenshot)driver).GetScreenshot();
 
-
-            driver.Navigate().GoToUrl("https://www.facebook.com/");
-            driver.Manage().Window.Maximize();
-
-            IWebElement email = driver.FindElement(By.Id("email"));
-            email.SendKeys(Credenciales.Email);
-
-            IWebElement pass = driver.FindElement(By.Id("pass"));
-            pass.SendKeys(Credenciales.Password);
-
-            IWebElement btnLogin = driver.FindElement(By.Name("login"));
-            btnLogin.Click();
+            //Realziando el logeo a la pagina
+            LoginTesting.loginTest(driver);
 
 
            //Quinta prueba unitaria. Visualizacion de lista de amigos
-
            IWebElement searchFriends = driver.FindElement(By.XPath("//span[contains(text(), 'Buscar amigos')]"));
            IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
 
@@ -57,7 +46,7 @@ namespace SeleniumProject.UnitTests
            lookForAFriend.SendKeys("Daniel Lachapelle");
 
            Thread.Sleep(10000);
-           driver.Quit();
+           //driver.Quit();
         }
     }
 }

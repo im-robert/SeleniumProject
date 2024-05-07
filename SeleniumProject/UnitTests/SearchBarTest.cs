@@ -12,19 +12,10 @@ namespace SeleniumProject.UnitTests
     {
         public static void SearchBarTesting(IWebDriver driver)
         {
+            //Realizando el logeo a la pagina
+            LoginTesting.loginTest(driver);
+
             //Segunda prueba unitaria. Campo de busqueda
-            driver.Navigate().GoToUrl("https://www.facebook.com/");
-            driver.Manage().Window.Maximize();
-
-            IWebElement email = driver.FindElement(By.Id("email"));
-            email.SendKeys(Credenciales.Email);
-
-            IWebElement pass = driver.FindElement(By.Id("pass"));
-            pass.SendKeys(Credenciales.Password);
-
-            IWebElement btnLogin = driver.FindElement(By.Name("login"));
-            btnLogin.Click();
-
             IWebElement search = driver.FindElement(By.CssSelector("input[placeholder='Search Facebook']"));
             search.SendKeys("ITLA");
 

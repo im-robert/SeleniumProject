@@ -11,22 +11,12 @@ namespace SeleniumProject.UnitTests
     {
         public static void SendMessage(IWebDriver driver)
         {
+            //Realziando el loego a la pagina.
+            LoginTesting.loginTest(driver);
 
-            //Sexta prueba unitaria. Enviar mensaje de texto
-            driver.Navigate().GoToUrl("https://www.facebook.com/");
-            driver.Manage().Window.Maximize();
+            Thread.Sleep(6000);
 
-            IWebElement email = driver.FindElement(By.Id("email"));
-            email.SendKeys(Credenciales.Email);
-
-            IWebElement pass = driver.FindElement(By.Id("pass"));
-            pass.SendKeys(Credenciales.Password);
-
-            IWebElement btnLogin = driver.FindElement(By.Name("login"));
-            btnLogin.Click();
-
-            Thread.Sleep(10000);
-
+            //Sexta prueba unitaria. Enviar mensaje de texto.
             IWebElement messengerBtn = driver.FindElement(By.CssSelector("div[aria-label='Messenger']"));
             messengerBtn.Click();
 

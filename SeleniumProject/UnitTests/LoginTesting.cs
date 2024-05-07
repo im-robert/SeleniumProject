@@ -9,7 +9,7 @@ class LoginTesting
 {
     public static void loginTest(IWebDriver driver)
     {
-        Screenshot screenshot = ((ITakesScreenshot)driver).GetScreenshot();
+        Screenshot screenshot = ((ITakesScreenshot)driver).GetScreenshot(); 
 
         //Primera prueba unitaria. Inicio de sesion exitoso
 
@@ -22,15 +22,15 @@ class LoginTesting
         IWebElement pass = driver.FindElement(By.Id("pass"));
         pass.SendKeys(Credenciales.Password);
 
-        Thread.Sleep(7000);
+        Thread.Sleep(5000);
 
         IWebElement btnLogin = driver.FindElement(By.Name("login"));
         btnLogin.Click();
 
         screenshot.SaveAsFile(Credenciales.screenshotPath + "LoginImage.png");
 
-        Thread.Sleep(10000);
-        driver.Quit();
+        Thread.Sleep(5000);
+        //driver.Quit();
     }
 }
 
