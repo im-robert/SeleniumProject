@@ -1,35 +1,21 @@
-1. Primera prueba unitaria. Login de usuario con éxito.
+Este es un proyecto de pruebas automatizadas desarrolladas utilizando Selenium WebDriver y C# para realizar pruebas en la aplicación web de Facebook.
 
--Esta prueba se encarga de verificar si el login de usuario se efectua de manera correcta de acuerdo a las credenciales del usuario. 
+El objetivo de este proyecto es demostrar el uso de Selenium WebDriver junto con C# para automatizar pruebas funcionales en el sitio web de Facebook. Se incluyen 6 pruebas las cuales son:
 
-La prueba fue efectuada con éxtio.
+LoginTesting.cs: Contiene pruebas relacionadas con el inicio de sesión en Facebook.
 
-2. Segunda prueba unitaria. Búsqueda en la web.
+LoginFailed.cs: Prueba del inicio de sesión fallida con credenciales incorrectas.
 
--Prueba que se encarga de verificar la funcionalidad de la barra de búsqueda en la página web, ver las sugerencias de acuerdo a lo escrito en la barra y visualizar los resultados de la búsqueda.
+SearchBarTest.cs: Contiene pruebas relacionadas con la funcionalidad de búsqueda en Facebook.
 
-La prueba fue efectuada con éxito.
+ForgottenPassword.cs: Prueba relacionada a la función de contraseña olvidada de Facebook.
 
-3. Tercera prueba unitaria. Contraseña olvidada y metodos de recuperacion
+FriendList.cs: Prueba que realiza las funciones de ver lista de amigos, solicitudes de amistad y busca un amigo en específico.
 
--Esta se encarga de verificar la funcionalidad de contraseña olvidada y al enviar el correo del usuario, la página le brinda diferentes opciones de recuperación de contraseña.
+SendMessage.cs: Prueba para entrar a los chats y enviar un mensaje en el sitio web de Facebook exitosamente.
 
-La prueba fue efectuada con éxito.
+Credenciales.cs: Archivo de configuración que contiene las credenciales de inicio de sesión para las pruebas.
 
-4. Cuarta prueba unitaria. Login de usuario fallido.
 
--Se encarga de notificarle al usuario si alguna de las credenciales brindadas fue incorrecta mediante una notificación en rojo, no le aclara cual de las credenciales es la incorrecta.
 
-La prueba fue efectuada con éxito.
-
-5. Quinta prueba unitaria. Visualizacion de lista de amigos.
-
--Se encarga de comprobar la funcionalidad de la visualización de la lista de amigos del usuario, asi como las solicitudes pendientes del mismo y también poder buscar a un amigo en específico dentro de esta lista.
-
-La prueba fue efectuada con éxito.
-
-6. Sexta prueba unitaria. Enviar mensaje de texto.
-
--Esta prueba verifica la funcionalidad de enviar mensajes, primero busca entre los chats y elije un chat, y luego dentro de este envía un mensaje cualquiera.
-
-La prueba fue efectuada con éxito.
+Cabe recalcar que las credenciales subidas al Github no son las utlizadas en las pruebas, para la verificación de todo el código se pueden utlizar las credenciales de cualquier usuario y con unos pequeños cambios de nombres de usuario en algunas pruebas también.
